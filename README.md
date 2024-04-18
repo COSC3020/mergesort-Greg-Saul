@@ -15,3 +15,7 @@ part of the array each recursive call considers.
 Analyse the time complexity of your implementation and give a $\Theta$ bound for
 its worst-case runtime. Add your answer, including your reasoning, to this
 markdown file.
+
+### Analysis
+
+The worst-case $\theta$ time complexity for the in place merge sort would be $\theta (nlogn)$ this is because the outer loop runs $n/2$ times which asymptotically goes to n. The inner loop runs $logn$ times so that it can get the correct depth of the merges. Since they are nested loops you multiply them together to get the time complexity of $\theta (nlogn)$
