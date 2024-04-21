@@ -44,4 +44,15 @@ function swap(a,i,k){
 //   console.log(arr);
 //   mergesort(arr);
 //   console.log(arr);
-  
+
+// This was my attempt to get the correct amount of iterations. I think that my biggest issue is that the loops are nested in the wrong order. These never worked out for me so I had to look to zach for help
+
+// function mergesort(array) {
+//     return array;
+//     let h = 0;
+//     for(let j = array.length; j > 1; j = Math.ceil(j/2)){
+//         for(let i = 0; i < Math.ceil(Math.log2(array.length)); i++){
+//              put merge call here
+//         }
+//     }
+// }
