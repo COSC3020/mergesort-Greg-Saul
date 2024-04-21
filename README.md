@@ -1,4 +1,7 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/1uurLsu5)
+
+### Note: my code is heavily influenced by https://github.com/COSC3020/mergesort-ZachRenz/blob/main/code.js but the runtime analysis is my own
+
 # Mergesort
 
 Implement an iterative (no recursive calls) and in-place version of mergesort.
@@ -18,4 +21,4 @@ markdown file.
 
 ### Analysis
 
-The worst-case $\theta$ time complexity for the in place merge sort would be $\theta (nlogn)$ this is because the outer loop runs $n/2$ times which asymptotically goes to n. The inner loop runs $logn$ times so that it can get the correct depth of the merges. Since they are nested loops you multiply them together to get the time complexity of $\theta (nlogn)$
+
