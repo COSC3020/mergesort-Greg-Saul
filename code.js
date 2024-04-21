@@ -1,35 +1,47 @@
-//I think I need to swap the inner loop with the outer loop
-// function mergesort(array) {
-//     let h = Math.ceil(Math.log2(array.length));
-//     for(let j = array.length; j > 1; j = Math.ceil(j/2)){
-//         for(let i = 0; i < h; i++){
+//This code is heavily influenced by https://github.com/COSC3020/mergesort-ZachRenz/blob/main/code.js 
+//especially the nested for loops and for other cases where I got very stuck
 
-//         }
-//         h--;
-//     }
-// }
-
-function mergesort(array){
-    let h = Math.ceil(Math.log2(array.length));
-    for(let i = 0; i < h; i++){
-        console.log(i);
-        for(let j = array.length; j > 0; j -= 2){
-            // console.log(j);
-            if(array[j - 1] < array[j - 2]){
-                swap(array, j - 1, j - 2);
-            }
-        }
-        // h--;
+function mergesort(array) {
+    if(array.length < 2){
+        return array;
     }
+
+    for(i = 0, j = 1, sizeToMerge = 2; sizeToMerge < 2 * array.length; i = 0, j = sizeToMerge, sizeToMerge *= 2){
+        for(; j < array.length; i += sizeToMerge, j += sizeToMerge){
+            merge(sizeToMerge, i, j, array);
+        }
+    }
+
     return array;
 }
 
-function swap(arr, index1, index2){
-    let tmp = arr[index1];
-    arr[index1] = arr[index2];
-    arr[index2] = tmp;
-    return arr;
+function merge(size, i, j, arr){
+    let merged = false;
+    while(merged == false){
+        if(i == j)
+            merged = true;
+        else if(arr[i] <= arr[j])
+            i++;
+        else if(arr[i]>arr[j]){
+            let k = j + 1;
+            while(arr[k] < arr[i] && k <= (j - 1 + size)){
+                k++;
+            }
+            k--;
+            swap(arr,i,k);
+        }
+    }
 }
 
-let array = [8,2,4,5,7,1,6,3];
-console.log(mergesort(array));
+function swap(a,i,k){
+    let tmp = a[k];
+    a[k] = a[i];
+    a[i] = tmp;
+}
+
+
+//   let arr = [8,73,2,4,0,5,987,2,709,8,4758,9,768,95,79,8,27,4];
+//   console.log(arr);
+//   mergesort(arr);
+//   console.log(arr);
+  
