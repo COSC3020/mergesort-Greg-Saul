@@ -3,9 +3,9 @@ function mergesort(array) {
         return array;
     }
     // console.log(array.length)
-    for(let size = 1; size < array.length; size *= 2){ //size is the size of the "sub arrays"
+    for(let size = 1; size < array.length; size *= 2){ //size is the size of the "sub arrays" //logn times
         //  console.log("size: " + size)
-        for(let start = 0; start < array.length; start += size * 2){
+        for(let start = 0; start < array.length; start += size * 2){ // n times
             // console.log(start)
             let mid = Math.min(start + size - 1, array.length - 1);
             var end = Math.min(start + 2 * size - 1, array.length - 1);
@@ -23,7 +23,7 @@ function merge(arr, s, m, e){
         return;
     }
  
-    while (s <= m && s2 <= e)
+    while (s <= m && s2 <= e) // n
     {
         if (arr[s] <= arr[s2])
         {
@@ -47,9 +47,9 @@ function merge(arr, s, m, e){
 }
 
 
-  let arr = [8,73,2,4,0,5,987,2,709,8,4758,9,768,95,79,8,27,4];
+//  let arr = [8,73,2,4,0,5,987,2,709,8,4758,9,768,95,79,8,27,4];
 //   console.log(arr);
-  console.log(mergesort(arr));
+//  console.log(mergesort(arr));
 //   console.log(arr);
 
 
