@@ -21,7 +21,6 @@ markdown file.
 
 ### Analysis
 
-the outer for loop in the mergesort function runs $2^x = n or \log_2 n$ times. This is found when looking at the 
 
 
 
