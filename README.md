@@ -1,7 +1,5 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/1uurLsu5)
 
-### Note: my code is heavily influenced by https://github.com/COSC3020/mergesort-ZachRenz/blob/main/code.js but the runtime analysis is my own
-
 # Mergesort
 
 Implement an iterative (no recursive calls) and in-place version of mergesort.
@@ -20,6 +18,14 @@ its worst-case runtime. Add your answer, including your reasoning, to this
 markdown file.
 
 ### Analysis
+
+
+### Sources
+https://www.geeksforgeeks.org/iterative-merge-sort/
+
+https://www.geeksforgeeks.org/in-place-merge-sort/
+
+I used both of these to help me with different parts of the program
 
 
 
