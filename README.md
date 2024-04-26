@@ -19,6 +19,16 @@ markdown file.
 
 ### Analysis
 
+```mergesort()``` outer loop: the outer loop runs $log_2 n$ times because the size variable is multiplied by 2 every iteration until it is greater than the length of the array. This gives the inner loop $\theta(logn)$
+
+```mergesort()``` inner loop: the inner loop runs $\frac{n}{size}$ times which reduces to $\theta(n)$ once we drop the constants.
+
+currently the complezity is at $nlogn$
+
+```merge()``` while loop: the while loop iterates through every element of the array making it $\theta(n)$
+
+This brings our overall complexity to $n^2logn$
+
 
 ### Sources
 https://www.geeksforgeeks.org/iterative-merge-sort/
